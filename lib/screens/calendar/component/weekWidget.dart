@@ -10,11 +10,11 @@ class WeekDesign extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text("First week",style: TextStyle(color: const Color(0xff4D96FF),fontSize: 18.sp,fontWeight: FontWeight.bold)),
-        SizedBox(height: 25.h,),
-        WeekDesign(day:"Saturday" ),
-        WeekDesign(day:"Monday" ),
-        WeekDesign(day:"Thursday" ),
+         const Text("First week",style: TextStyle(color: Color(0xff4D96FF),fontSize: 18,fontWeight: FontWeight.bold)),
+        // SizedBox(height: 25.h,),
+        // WeekDesign(day:"Saturday" ),
+        // WeekDesign(day:"Monday" ),
+        // WeekDesign(day:"Thursday" ),
         SizedBox(height: 27.h,),
         Row(
           children: [
@@ -28,7 +28,7 @@ class WeekDesign extends StatelessWidget {
         ),
         SizedBox(
           height: 64.h,
-          width: 428,
+          width: 428.w,
           child: ListView.builder(scrollDirection: Axis.horizontal,
             itemBuilder: (context, index) => Padding(
               padding: EdgeInsets.only(right: 15.w),
@@ -37,7 +37,7 @@ class WeekDesign extends StatelessWidget {
                   width: 131.w,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(7.r)),
-                      color: const Color(0xff4D96FF)),child: Center(child: Text("Lecture",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 18.sp),))),
+                      color: const Color(0xff4D96FF)),child: const Center(child: Text("Lecture",style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 18),))),
             ),itemCount: 2,
           ),
         ),

@@ -26,16 +26,16 @@ class LoginContainer extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Center(
+            const Center(
                 child: Text(
                   "welcome",
-                  style: TextStyle(color: Colors.black, fontSize: 39.sp),
+                  style: TextStyle(color: Colors.black, fontSize: 39),
                 )),
             SizedBox(height: 19.h),
-            Center(
+            const Center(
                 child: Text(
                   "Login to continue",
-                  style: TextStyle(color: Colors.black38, fontSize: 19.sp),
+                  style: TextStyle(color: Colors.black38, fontSize: 19),
                 )),
             SizedBox(
               height: 73.h,

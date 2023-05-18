@@ -24,7 +24,7 @@ class _MyNavigatorBottomBarState extends State<MyNavigatorBottomBar> {
   );
   final List<Widget> _pages = [
     HomeScreen(),
-     CalendarScreen(),
+    CalendarScreen(),
     HomeScreenForStudent(),
 
   ];
@@ -48,8 +48,12 @@ class _MyNavigatorBottomBarState extends State<MyNavigatorBottomBar> {
               onTap: (index) {
                 setState(() {
                   _currentIndex = index;
+                  print("==========================================");
+                  print(index);
+                  print("==========================================");
+
                 });
-                print(index);
+
               },
               items: [
                 BottomNavigationBarItem(

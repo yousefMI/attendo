@@ -15,7 +15,7 @@ class ForgetScreen extends StatelessWidget {
           
           Expanded(
             child: Padding(
-              padding: const EdgeInsetsDirectional.symmetric(horizontal: 20),
+              padding:  EdgeInsetsDirectional.symmetric(horizontal: 20.w),
               child:
                   FloatingActionButton(
                       onPressed: () {

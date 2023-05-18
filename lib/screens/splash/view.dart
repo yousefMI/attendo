@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:moharam/screens/login/view.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -49,11 +48,11 @@ class _SplashScreenState extends State<SplashScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset("assets/graduate 1.png"),
-                Text("attendo",
+                const Text("attendo",
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: 65.sp,
+                      fontSize: 65,
                       decoration: TextDecoration.none,
                     )),
 

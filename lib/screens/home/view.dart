@@ -18,16 +18,16 @@ class HomeScreen extends StatelessWidget {
           padding: EdgeInsetsDirectional.symmetric(horizontal: 16.w),
           child: Row(
             children: [
-              Column(
+              const Column(
                 children: [
                   Text(
                     "Hossam",
                     style: TextStyle(
-                      fontSize: 23.sp,
+                      fontSize: 23,
                       color: Colors.white,
                     ),
                   ),
-                  const Text("ID: 76357654764 | Student",
+                  Text("ID: 76357654764 | Student",
                       style: TextStyle(
                         color: Colors.white,
                       )),
@@ -66,7 +66,7 @@ class HomeScreen extends StatelessWidget {
                       Text("${days[index]}\n\n${clander[index]}",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: 14.sp,
+                              fontSize: 14,
                               color: index == 3
                                   ? const Color(0xff4D96FF)
                                   : Colors.white)),
@@ -92,13 +92,13 @@ class HomeScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: index == 1 ? Colors.white : const Color(0x4DFFFFFF),
                       borderRadius: BorderRadius.all(Radius.circular(20.r))),
-                  child: Column(
+                  child: const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text("SOFTWARE\nANALYSIS\n\n9:00 am",
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: 14.sp, color: const Color(0xff4D96FF))),
+                              fontSize: 14, color: Color(0xff4D96FF))),
                     ],
                   )),
             ),
