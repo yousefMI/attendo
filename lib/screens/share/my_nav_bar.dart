@@ -6,9 +6,10 @@ import 'package:moharam/screens/home_1/view.dart';
 
 
 class MyNavigatorBottomBar extends StatefulWidget {
-  const MyNavigatorBottomBar({
-    Key? key,
+   MyNavigatorBottomBar({
+    Key? key,required this.name,required this.image,required this.type ,required this.id
   }) : super(key: key);
+  String ?type ,name,image,id;
 
   //final String title;
 
@@ -18,22 +19,28 @@ class MyNavigatorBottomBar extends StatefulWidget {
 
 class _MyNavigatorBottomBarState extends State<MyNavigatorBottomBar> {
   int _currentIndex = 0;
+
   PageController pageController = PageController(
     initialPage: 0,
     keepPage: true,
   );
-  final List<Widget> _pages = [
-    HomeScreen(),
-    CalendarScreen(),
-    HomeScreenForStudent(),
 
-  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
 
-      body: _pages[_currentIndex],
+      body: PageView(controller:pageController ,onPageChanged: (value) {
+        setState(() {
+          _currentIndex =value;
+        });
+      },
+        children: [
+          HomeScreen(type: "${widget.type}", id: "${widget.id}", image: "${widget.image}", name: "${widget.name}"),
+          CalendarScreen(),
+          HomeScreen(type: "${widget.type}", id: "${widget.id}", image: "${widget.image}", name: "${widget.name}"),
+        ],
+      ),
       bottomNavigationBar: Container(color: Colors.white,
         child: ClipRRect(
           borderRadius: BorderRadius.only(

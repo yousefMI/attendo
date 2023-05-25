@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "223410004974",
+    "project_id": "moharam-5f3ae",
+    "storage_bucket": "moharam-5f3ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223410004974:android:bcbc534b1cbe98fc0164ff",
+        "android_client_info": {
+          "package_name": "com.example.moharam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223410004974-taqkn3qkghjmir006jjnqar30jdt5fui.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFrs31XerxLkbHIy6Fk3RJWBjRxzc9Iaw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "223410004974-taqkn3qkghjmir006jjnqar30jdt5fui.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

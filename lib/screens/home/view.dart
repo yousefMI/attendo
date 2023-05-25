@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:moharam/screens/home/components/container.dart';
 import 'package:moharam/screens/home_1/components/container.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({Key? key}) : super(key: key);
+  HomeScreen({Key? key,required this.type,required this.id,required this.image,required this.name}) : super(key: key);
   List<String> days = ["MO", "TU", "WE", "TH", "FR", "SA", "SU"];
   List<String> clander = ["12", "13", "14", "15", "16", "17", "18"];
-
+  String type ,name,image,id;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,29 +19,46 @@ class HomeScreen extends StatelessWidget {
           padding: EdgeInsetsDirectional.symmetric(horizontal: 16.w),
           child: Row(
             children: [
-              const Column(
+               Column(
                 children: [
                   Text(
-                    "Hossam",
+                    name,
                     style: TextStyle(
                       fontSize: 23,
                       color: Colors.white,
                     ),
                   ),
-                  Text("ID: 76357654764 | Student",
+                  Text("ID: $id | $type",
                       style: TextStyle(
                         color: Colors.white,
                       )),
                 ],
               ),
               const Spacer(),
-              Container(
-                width: 97.w,
-                height: 93.h,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(20.r))),
-              ),
+               GestureDetector(onTap: (){
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(
+                     builder: (context) => Scaffold(
+                       body: Center(
+                         child: Hero(
+                           tag: image,
+                           child: Container(
+                             child: Image.asset(image),
+                           ),
+                         ),
+                       ),
+                     ),
+                   ),
+                 );
+               },child:  Hero(tag: image,child: Container(decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.r))),child:  ClipRRect(borderRadius: BorderRadius.all(Radius.circular(20.r)),clipBehavior: Clip.antiAliasWithSaveLayer,child: Image.asset(image,height: 93.h, width: 97.w,fit: BoxFit.fill))))),
+              // Container(child: ClipRRect(clipBehavior: Clip.antiAliasWithSaveLayer,child: Image.asset(image)),
+              //   width: 97.w,
+              //   height: 93.h,
+              //   decoration: BoxDecoration(
+              //       color: Colors.white,
+              //       borderRadius: BorderRadius.all(Radius.circular(20.r))),
+              // ),
             ],
           ),
         ),
@@ -109,7 +127,7 @@ class HomeScreen extends StatelessWidget {
           height: 42.h,
         ),
         //Expanded(child: Container(color: Colors.white,))
-        const Expanded(child: HomeContainerForDoctor()),
+         Expanded(child:type=='Doctor'? HomeContainerForDoctor():HomeContainerForStudent()),
       ]),
     );
   }

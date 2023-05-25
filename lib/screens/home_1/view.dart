@@ -27,7 +27,7 @@ class HomeScreenForStudent extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  Text("ID: 76357654764 | Student",
+                  Text("ID: 319200081 | Student",
                       style: TextStyle(
                         color: Colors.white,
                       )),

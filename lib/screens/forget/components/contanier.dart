@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:moharam/screens/login/view.dart';
 import 'package:moharam/screens/share/my_button.dart';
 import 'package:moharam/screens/share/my_input.dart';
 
@@ -37,7 +38,7 @@ class ForgetContainer extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsetsDirectional.symmetric(horizontal: 34.w),
-              child: MyButton(
+              child: MyButton(screen: LoginScreen(),
                   buttonColor: 0xffFFD93D,
                   buttonText: "Reset",
                   textColor: 0xffffffff),
